@@ -54,7 +54,7 @@ namespace pryAguirreIE
         private void btnAbrir_Click(object sender, EventArgs e)
         {
             OpenFileDialog LeerArchivo = new OpenFileDialog();
-            if(OpenFileDialog.ShowDialog() == DialogResult.OK)
+            //if(OpenFileDialog.ShowDialog() == DialogResult.OK)
             {
                 StreamReader Leer = new StreamReader(LeerArchivo.FileName);
                 txtLeer.Text= Leer.ReadToEnd();
