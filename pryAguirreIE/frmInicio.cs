@@ -48,10 +48,19 @@ namespace pryAguirreIE
 
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
-            if(folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            
+        }
+
+        private void btnAbrir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog LeerArchivo = new OpenFileDialog();
+            if(OpenFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Listado.Nodes.Add == 
-                }
+                StreamReader Leer = new StreamReader(LeerArchivo.FileName);
+                txtLeer.Text= Leer.ReadToEnd();
+                Leer.Close();
+            }
+
         }
     }
 }
