@@ -25,9 +25,9 @@ namespace pryAguirreIE
 
         private void btnBuscarArchivo_Click(object sender, EventArgs e)
         {
-            folderBrowserDialog1 = new FolderBrowserDialog();
-            folderBrowserDialog1.ShowDialog();
-            lblDireccionCarpeta.Text = folderBrowserDialog1.SelectedPath;
+            //folderBrowserDialog1 = new FolderBrowserDialog();
+            //folderBrowserDialog1.ShowDialog();
+            //lblDireccionCarpeta.Text = folderBrowserDialog1.SelectedPath;
 
 
 
@@ -53,14 +53,21 @@ namespace pryAguirreIE
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            OpenFileDialog LeerArchivo = new OpenFileDialog();
+            //OpenFileDialog LeerArchivo = new OpenFileDialog();
             //if(OpenFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader Leer = new StreamReader(LeerArchivo.FileName);
-                txtLeer.Text= Leer.ReadToEnd();
-                Leer.Close();
-            }
+            //{
+            //    StreamReader Leer = new StreamReader(LeerArchivo.FileName);
+            //    txtLeer.Text= Leer.ReadToEnd();
+            //    Leer.Close();
+            //}
 
+        }
+
+        private void buscarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Proveedores pasar = new Proveedores();
+            pasar.Show();
         }
     }
 }
