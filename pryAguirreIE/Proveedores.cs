@@ -26,11 +26,12 @@ namespace pryAguirreIE
         private void Proveedores_Load(object sender, EventArgs e)
         {
             TreeNode nodoMadre;
-            DirectoryInfo info = new DirectoryInfo(@"Proveedores");
-            if (info.Exists)
+            DirectoryInfo info = new DirectoryInfo("C:\\Program Files");
+            if (info.Exists==true)
             {
                 nodoMadre = new TreeNode(info.Name);
                 nodoMadre.Tag = info;
+                
                 treeView1.Nodes.Add(nodoMadre);
             }
         }

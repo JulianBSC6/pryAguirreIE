@@ -69,5 +69,12 @@ namespace pryAguirreIE
             Proveedores pasar = new Proveedores();
             pasar.Show();
         }
+
+        private void cargarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CargarProveedores Pasar = new CargarProveedores();
+            Pasar.Show();
+        }
     }
 }

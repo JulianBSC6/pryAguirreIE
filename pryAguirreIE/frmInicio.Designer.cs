@@ -80,6 +80,7 @@
             this.cargarProveedoresToolStripMenuItem.Name = "cargarProveedoresToolStripMenuItem";
             this.cargarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(233, 28);
             this.cargarProveedoresToolStripMenuItem.Text = "Cargar Proveedores";
+            this.cargarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedoresToolStripMenuItem_Click);
             // 
             // label1
             // 
