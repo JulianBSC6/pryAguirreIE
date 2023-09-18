@@ -112,5 +112,20 @@ namespace pryAguirreIE
         {
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string Seleccionado;
+            Seleccionado = listView1.SelectedItems[0].ToString();
+            
+            {
+                StreamReader Leer = new StreamReader(Seleccionado.ToString());
+                while (Leer.EndOfStream==false)
+                {
+                    txtLeerDatos.Text = Leer.ReadLine();
+                }
+                Leer.Close();
+            }
+        }
     }
 }

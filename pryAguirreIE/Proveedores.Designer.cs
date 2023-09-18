@@ -30,10 +30,11 @@
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtLeerDatos = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,7 +55,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.Black;
+            this.listView1.BackColor = System.Drawing.Color.White;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nombre,
             this.Tipo,
@@ -68,6 +69,19 @@
             this.listView1.Size = new System.Drawing.Size(530, 450);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Tipo";
+            // 
+            // Tipo
+            // 
+            this.Tipo.Text = "Tipo";
+            // 
+            // Detalle
+            // 
+            this.Detalle.Text = "Detalle";
             // 
             // splitContainer1
             // 
@@ -82,22 +96,19 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.txtLeerDatos);
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 2;
             // 
-            // Nombre
+            // txtLeerDatos
             // 
-            this.Nombre.Text = "Tipo";
-            // 
-            // Tipo
-            // 
-            this.Tipo.Text = "Tipo";
-            // 
-            // Detalle
-            // 
-            this.Detalle.Text = "Detalle";
+            this.txtLeerDatos.Location = new System.Drawing.Point(0, 222);
+            this.txtLeerDatos.Multiline = true;
+            this.txtLeerDatos.Name = "txtLeerDatos";
+            this.txtLeerDatos.Size = new System.Drawing.Size(530, 228);
+            this.txtLeerDatos.TabIndex = 2;
             // 
             // Proveedores
             // 
@@ -111,6 +122,7 @@
             this.Load += new System.EventHandler(this.Proveedores_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Detalle;
+        private System.Windows.Forms.TextBox txtLeerDatos;
     }
 }
