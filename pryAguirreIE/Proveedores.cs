@@ -24,7 +24,7 @@ namespace pryAguirreIE
         {
             TreeNode nodoMadre;
 
-            DirectoryInfo info = new DirectoryInfo(@"C:\Users\Usuario\Desktop\Sistema para Aseguradora");
+            DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             if (info.Exists == true) //POR DEFECTO el IF pregunta true
             {
                 nodoMadre = new TreeNode(info.Name);
@@ -115,17 +115,28 @@ namespace pryAguirreIE
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string Seleccionado;
-            Seleccionado = listView1.SelectedItems[0].ToString();
-            
-            {
-                StreamReader Leer = new StreamReader(Seleccionado.ToString());
+            //bool Seleccionado;
+            //Seleccionado = (listView1.SelectedItems[0]);
+           // if(listView1.Items==true)
+           // {
+
+
+           
+
+                StreamReader Leer = new StreamReader();
                 while (Leer.EndOfStream==false)
                 {
                     txtLeerDatos.Text = Leer.ReadLine();
                 }
                 Leer.Close();
-            }
+           // }
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicio volver = new frmInicio();
+            volver.Show();
         }
     }
 }

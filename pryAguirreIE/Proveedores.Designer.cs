@@ -35,6 +35,7 @@
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.txtLeerDatos = new System.Windows.Forms.TextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,7 +56,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.White;
+            this.listView1.BackColor = System.Drawing.Color.Black;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nombre,
             this.Tipo,
@@ -91,6 +92,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnVolver);
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
@@ -104,11 +106,27 @@
             // 
             // txtLeerDatos
             // 
+            this.txtLeerDatos.BackColor = System.Drawing.Color.Black;
+            this.txtLeerDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLeerDatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.txtLeerDatos.Location = new System.Drawing.Point(0, 222);
             this.txtLeerDatos.Multiline = true;
             this.txtLeerDatos.Name = "txtLeerDatos";
             this.txtLeerDatos.Size = new System.Drawing.Size(530, 228);
             this.txtLeerDatos.TabIndex = 2;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(3, 412);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(114, 35);
+            this.btnVolver.TabIndex = 16;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Proveedores
             // 
@@ -137,5 +155,6 @@
         private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Detalle;
         private System.Windows.Forms.TextBox txtLeerDatos;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

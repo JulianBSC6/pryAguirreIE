@@ -21,5 +21,12 @@ namespace pryAguirreIE
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicio volver = new frmInicio();
+            volver.Show();
+        }
     }
 }

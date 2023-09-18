@@ -43,6 +43,7 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtLiquidador = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNumero
@@ -184,12 +185,26 @@
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(14, 400);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(114, 35);
+            this.btnVolver.TabIndex = 15;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // CargarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(550, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtLiquidador);
             this.Controls.Add(this.txtDireccion);
@@ -230,5 +245,6 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtLiquidador;
         private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnVolver;
     }
 }
