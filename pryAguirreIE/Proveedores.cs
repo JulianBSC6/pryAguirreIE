@@ -134,9 +134,10 @@ namespace pryAguirreIE
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            string ruta = listView1.SelectedItems[0].Text;
-
-                StreamReader Leer = new StreamReader(ruta);
+            DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
+            string ruta = info.FullName;
+            string nombreArchivo = listView1.SelectedItems[0].Text;
+            StreamReader Leer = new StreamReader(ruta+"/"+nombreArchivo);
             while (Leer.EndOfStream == false)
             {
                 txtLeerDatos.Text = Leer.ReadLine();
@@ -145,3 +146,4 @@ namespace pryAguirreIE
         }
     }
 }
+
