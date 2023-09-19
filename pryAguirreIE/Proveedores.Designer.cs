@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedores));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.txtLeerDatos = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.txtLeerDatos = new System.Windows.Forms.TextBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,8 +51,11 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.treeView1.ImageIndex = 0;
+            this.treeView1.ImageList = this.imageList1;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
+            this.treeView1.SelectedImageIndex = 0;
             this.treeView1.Size = new System.Drawing.Size(266, 450);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -68,9 +74,12 @@
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(530, 450);
+            this.listView1.SmallImageList = this.imageList1;
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
             // Nombre
             // 
@@ -79,10 +88,12 @@
             // Tipo
             // 
             this.Tipo.Text = "Tipo";
+            this.Tipo.Width = 80;
             // 
             // Detalle
             // 
             this.Detalle.Text = "Detalle";
+            this.Detalle.Width = 82;
             // 
             // splitContainer1
             // 
@@ -104,17 +115,6 @@
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 2;
             // 
-            // txtLeerDatos
-            // 
-            this.txtLeerDatos.BackColor = System.Drawing.Color.Black;
-            this.txtLeerDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLeerDatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.txtLeerDatos.Location = new System.Drawing.Point(0, 222);
-            this.txtLeerDatos.Multiline = true;
-            this.txtLeerDatos.Name = "txtLeerDatos";
-            this.txtLeerDatos.Size = new System.Drawing.Size(530, 228);
-            this.txtLeerDatos.TabIndex = 2;
-            // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.DarkGoldenrod;
@@ -127,6 +127,24 @@
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // txtLeerDatos
+            // 
+            this.txtLeerDatos.BackColor = System.Drawing.Color.Black;
+            this.txtLeerDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLeerDatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.txtLeerDatos.Location = new System.Drawing.Point(0, 222);
+            this.txtLeerDatos.Multiline = true;
+            this.txtLeerDatos.Name = "txtLeerDatos";
+            this.txtLeerDatos.Size = new System.Drawing.Size(530, 228);
+            this.txtLeerDatos.TabIndex = 2;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "2345409.png");
+            this.imageList1.Images.SetKeyName(1, "3601163.png");
             // 
             // Proveedores
             // 
@@ -156,5 +174,6 @@
         private System.Windows.Forms.ColumnHeader Detalle;
         private System.Windows.Forms.TextBox txtLeerDatos;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

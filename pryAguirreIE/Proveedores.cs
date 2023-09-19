@@ -117,18 +117,11 @@ namespace pryAguirreIE
         {
             //bool Seleccionado;
             //Seleccionado = (listView1.SelectedItems[0]);
-           // if(listView1.Items==true)
-           // {
+            // if(listView1.Items==true)
+            // {
 
 
-           
-
-                StreamReader Leer = new StreamReader();
-                while (Leer.EndOfStream==false)
-                {
-                    txtLeerDatos.Text = Leer.ReadLine();
-                }
-                Leer.Close();
+            
            // }
         }
 
@@ -137,6 +130,18 @@ namespace pryAguirreIE
             this.Hide();
             frmInicio volver = new frmInicio();
             volver.Show();
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string ruta = listView1.SelectedItems[0].Text;
+
+                StreamReader Leer = new StreamReader(ruta);
+            while (Leer.EndOfStream == false)
+            {
+                txtLeerDatos.Text = Leer.ReadLine();
+            }
+            Leer.Close();
         }
     }
 }
