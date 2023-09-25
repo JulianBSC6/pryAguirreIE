@@ -97,15 +97,7 @@ namespace pryAguirreIE
 
         private void Proveedores_Load(object sender, EventArgs e)
         {
-            //TreeNode nodoMadre;
-            //DirectoryInfo info = new DirectoryInfo("C:\\Users\\Usuario\\Desktop\\Sistema para Aseguradora");
-            //if (info.Exists == true)
-            //{
-            //    nodoMadre = new TreeNode(info.Name);
-            //    nodoMadre.Tag = info;
-
-            //    treeView1.Nodes.Add(nodoMadre);
-            //}
+          
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -115,14 +107,7 @@ namespace pryAguirreIE
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //bool Seleccionado;
-            //Seleccionado = (listView1.SelectedItems[0]);
-            // if(listView1.Items==true)
-            // {
-
-
-            
-           // }
+           
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -131,18 +116,35 @@ namespace pryAguirreIE
             frmInicio volver = new frmInicio();
             volver.Show();
         }
-
+        String[] SepararDatos;
+        String LeerLinea;
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string ruta = info.FullName;
             string nombreArchivo = listView1.SelectedItems[0].Text;
             StreamReader Leer = new StreamReader(ruta+"/"+nombreArchivo);
+
+            LeerLinea = Leer.ReadLine();
+            SepararDatos = LeerLinea.Split(';');
+
+            //llamar a la grilla del formulario
+            frmMostrarGrilla ventanaGrilla = new frmMostrarGrilla();
+            ventanaGrilla.Show();
+            for (int indice = 0; indice < SepararDatos.Length; indice++)
+            {
+                //usar la grilla para cargar
+                ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos[indice], SepararDatos[indice]); ;
+
+            }
             while (Leer.EndOfStream == false)
             {
-                txtLeerDatos.Text = Leer.ReadLine();
+                LeerLinea = Leer.ReadLine() ;
+                SepararDatos = LeerLinea.Split(';');
+                ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos);
             }
             Leer.Close();
+            
         }
     }
 }

@@ -38,7 +38,6 @@
             this.Detalle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.txtLeerDatos = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -116,7 +115,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.txtLeerDatos);
             this.splitContainer1.Panel2.Controls.Add(this.listView1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
             this.splitContainer1.SplitterDistance = 266;
@@ -135,17 +133,6 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // txtLeerDatos
-            // 
-            this.txtLeerDatos.BackColor = System.Drawing.Color.Black;
-            this.txtLeerDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLeerDatos.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.txtLeerDatos.Location = new System.Drawing.Point(0, 222);
-            this.txtLeerDatos.Multiline = true;
-            this.txtLeerDatos.Name = "txtLeerDatos";
-            this.txtLeerDatos.Size = new System.Drawing.Size(530, 228);
-            this.txtLeerDatos.TabIndex = 2;
-            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,7 +146,6 @@
             this.Load += new System.EventHandler(this.Proveedores_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -173,7 +159,6 @@
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Tipo;
         private System.Windows.Forms.ColumnHeader Detalle;
-        private System.Windows.Forms.TextBox txtLeerDatos;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ImageList imageList1;
     }
