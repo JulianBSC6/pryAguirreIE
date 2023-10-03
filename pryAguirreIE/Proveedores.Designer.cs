@@ -153,7 +153,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
         public System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ColumnHeader Nombre;
@@ -161,5 +160,6 @@
         private System.Windows.Forms.ColumnHeader Detalle;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ImageList imageList1;
+        public System.Windows.Forms.ListView listView1;
     }
 }

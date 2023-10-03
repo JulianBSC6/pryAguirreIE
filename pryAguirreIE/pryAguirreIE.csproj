@@ -52,6 +52,7 @@
     <Compile Include="CargarProveedores.Designer.cs">
       <DependentUpon>CargarProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsGrabarArchivo.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>

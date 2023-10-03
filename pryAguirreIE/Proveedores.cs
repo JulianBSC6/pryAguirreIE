@@ -95,7 +95,7 @@ namespace pryAguirreIE
 
         }
 
-        private void Proveedores_Load(object sender, EventArgs e)
+        public void Proveedores_Load(object sender, EventArgs e)
         {
           
         }
@@ -105,7 +105,7 @@ namespace pryAguirreIE
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
            
         }
@@ -118,12 +118,15 @@ namespace pryAguirreIE
         }
         String[] SepararDatos;
         String LeerLinea;
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        string nombreArchivo;
+        public void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string ruta = info.FullName;
-            string nombreArchivo = listView1.SelectedItems[0].Text;
+            nombreArchivo = listView1.SelectedItems[0].Text;
             StreamReader Leer = new StreamReader(ruta+"/"+nombreArchivo);
+            clsGrabarArchivo.RutaFull = nombreArchivo+ruta;
+            CargarProveedores.RutaFull = nombreArchivo + ruta;
 
             LeerLinea = Leer.ReadLine();
             SepararDatos = LeerLinea.Split(';');
@@ -134,7 +137,7 @@ namespace pryAguirreIE
             for (int indice = 0; indice < SepararDatos.Length; indice++)
             {
                 //usar la grilla para cargar
-                ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos[indice], SepararDatos[indice]); ;
+                ventanaGrilla.GrillaMostrar.Rows.Add(SepararDatos[indice], SepararDatos[indice]); 
 
             }
             while (Leer.EndOfStream == false)

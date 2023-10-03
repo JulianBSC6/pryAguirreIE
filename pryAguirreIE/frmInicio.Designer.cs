@@ -33,7 +33,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -61,8 +60,7 @@
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.buscarProveedoresToolStripMenuItem,
-            this.cargarProveedoresToolStripMenuItem});
+            this.buscarProveedoresToolStripMenuItem});
             this.proveedoresToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
             this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
@@ -74,13 +72,6 @@
             this.buscarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.buscarProveedoresToolStripMenuItem.Text = "Buscar Proveedores";
             this.buscarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.buscarProveedoresToolStripMenuItem_Click);
-            // 
-            // cargarProveedoresToolStripMenuItem
-            // 
-            this.cargarProveedoresToolStripMenuItem.Name = "cargarProveedoresToolStripMenuItem";
-            this.cargarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
-            this.cargarProveedoresToolStripMenuItem.Text = "Cargar Proveedores";
-            this.cargarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.cargarProveedoresToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -134,7 +125,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarProveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarProveedoresToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombre;
     }
