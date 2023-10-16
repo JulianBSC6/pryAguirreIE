@@ -61,8 +61,23 @@ namespace pryAguirreIE
                         LineaArchivo.Add(line);
 
                     }
+                    else
+                    {
+                        string nuevaLinea = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtExpediente.Text + ";"+ txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidador.Text;
+                        LineaArchivo.Add(nuevaLinea);
+
+                    }
                 }
             }
+            using (StreamWriter escribir = new StreamWriter(RutaFull))
+            {
+                foreach(string elemento in LineaArchivo)
+                {
+                    escribir.WriteLine(elemento);
+                }
+                
+            }
+            MessageBox.Show("Modificado correctamente");
         }
     }
 }

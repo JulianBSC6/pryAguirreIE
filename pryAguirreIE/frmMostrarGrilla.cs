@@ -67,7 +67,7 @@ namespace pryAguirreIE
             string ID = Convert.ToString(GrillaMostrar.Rows[n].Cells[0].Value);
 
 
-            modificar.btnModificar.Enabled=false;
+            modificar.btnModificar.Enabled=true;
             modificar.Show();
             this.Hide();
 

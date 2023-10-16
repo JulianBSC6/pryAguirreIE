@@ -28,7 +28,7 @@ namespace pryAguirreIE
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string ruta = info.FullName;
             
-            StreamWriter Listado = new StreamWriter((ruta + "/" + RutaFull), true);
+            StreamWriter Listado = new StreamWriter((RutaFull), true);
             Listado.Write(numero);
             Listado.Write(";");
             Listado.Write(entidad);

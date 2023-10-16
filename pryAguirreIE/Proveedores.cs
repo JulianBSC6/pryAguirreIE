@@ -124,9 +124,9 @@ namespace pryAguirreIE
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string ruta = info.FullName;
             nombreArchivo = listView1.SelectedItems[0].Text;
-            StreamReader Leer = new StreamReader(ruta+"/"+nombreArchivo);
-            clsGrabarArchivo.RutaFull = nombreArchivo+ruta;
-            CargarProveedores.RutaFull = nombreArchivo + ruta;
+            StreamReader Leer = new StreamReader(ruta+ "\\" + nombreArchivo);
+            clsGrabarArchivo.RutaFull = ruta + "\\"+ nombreArchivo;
+            CargarProveedores.RutaFull =  ruta+ "\\" + nombreArchivo;
 
             LeerLinea = Leer.ReadLine();
             SepararDatos = LeerLinea.Split(';');
