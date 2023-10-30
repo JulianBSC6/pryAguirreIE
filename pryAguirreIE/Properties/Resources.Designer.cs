@@ -63,6 +63,16 @@ namespace pryAguirreIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_gradient_triangular_shape_background_vector {
+            get {
+                object obj = ResourceManager.GetObject("black-gradient-triangular-shape-background-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2023_09_04_132212 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2023-09-04 132212", resourceCulture);
