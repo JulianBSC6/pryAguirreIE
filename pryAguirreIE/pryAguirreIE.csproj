@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -53,6 +53,7 @@
       <DependentUpon>CargarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="clsGrabarArchivo.cs" />
+    <Compile Include="clsUsuario.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\black-gradient-triangular-shape-background-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-x-exit-button-icon-symbol-vector-illustration-closing-file-no-decline-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64498.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

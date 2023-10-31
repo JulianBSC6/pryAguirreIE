@@ -63,6 +63,16 @@ namespace pryAguirreIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _64498 {
+            get {
+                object obj = ResourceManager.GetObject("64498", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_gradient_triangular_shape_background_vector {
             get {
                 object obj = ResourceManager.GetObject("black-gradient-triangular-shape-background-vector", resourceCulture);
@@ -76,6 +86,17 @@ namespace pryAguirreIE.Properties {
         internal static System.Drawing.Bitmap Captura_de_pantalla_2023_09_04_132212 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2023-09-04 132212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_x_exit_button_icon_symbol_vector_illustration_closing_file_no_decline_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-x-exit-button-icon-symbol-vector-illustration-closing-file-no-dec" +
+                        "line-thumbnail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

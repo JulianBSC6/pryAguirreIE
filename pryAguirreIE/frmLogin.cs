@@ -26,5 +26,38 @@ namespace pryAguirreIE
         {
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                txtContraseña.PasswordChar= '\0';
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '*';
+            }
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            clsUsuario objUsuario = new clsUsuario();
+
+            objUsuario.ValidarUsuario(txtUsuario.Text, txtContraseña.Text);
+
+            if (objUsuario.estadoConexion == "Usuario EXISTE")
+            {
+                MessageBox.Show("Ingrese al sistema...");
+                objUsuario.RegistroLogInicioSesion();
+                this.Close();
+                frmInicio pasar = new frmInicio();
+                pasar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña y/o Usuario incorrectos", "Error login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                objUsuario.RegistroLogInicioSesion();
+            }
+        }
     }
 }
