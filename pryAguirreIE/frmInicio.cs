@@ -38,7 +38,8 @@ namespace pryAguirreIE
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-
+            clsUsuario objUsuario = new clsUsuario();
+            objUsuario.RegistroLogIngresoAlSistema();
         }
 
         private void button1_Click(object sender, EventArgs e)

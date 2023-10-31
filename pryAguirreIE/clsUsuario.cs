@@ -24,7 +24,7 @@ namespace pryAguirreIE
             try
             {
                 rutaArchivo = @"../../Archivos/BDusuarios.accdb";
-                
+
 
                 conexionBD = new OleDbConnection();
                 conexionBD.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + rutaArchivo;
@@ -34,13 +34,13 @@ namespace pryAguirreIE
 
                 estadoConexion = "Conectado";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 estadoConexion = ex.Message;
             }
-            
-                
-            
+
+
+
         }
         public void RegistroLogInicioSesion()
         {
@@ -107,6 +107,112 @@ namespace pryAguirreIE
                 estadoConexion = error.Message;
             }
         }
+        public void RegistroLogInicioFallidoSesion()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
 
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sesión";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio Fallido";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "Registro fallido de log";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+        public void RegistroLogIngresoAlSistema()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sistema";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio Menu";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "Inicio menu";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+
+        }
+        public void RegistroLogInicioSesionProveedores()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sesión";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio exitoso";
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "Registro exitoso de log";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
     }
 }
+    

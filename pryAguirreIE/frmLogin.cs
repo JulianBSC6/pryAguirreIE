@@ -41,22 +41,23 @@ namespace pryAguirreIE
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            
             clsUsuario objUsuario = new clsUsuario();
 
             objUsuario.ValidarUsuario(txtUsuario.Text, txtContraseña.Text);
 
             if (objUsuario.estadoConexion == "Usuario EXISTE")
             {
-                MessageBox.Show("Ingrese al sistema...");
+                MessageBox.Show("Ingrese al sistema...","Kanyo Seguros", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 objUsuario.RegistroLogInicioSesion();
-                this.Close();
+                this.Hide();
                 frmInicio pasar = new frmInicio();
                 pasar.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Contraseña y/o Usuario incorrectos", "Error login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                objUsuario.RegistroLogInicioSesion();
+                objUsuario.RegistroLogInicioFallidoSesion();
             }
         }
     }
