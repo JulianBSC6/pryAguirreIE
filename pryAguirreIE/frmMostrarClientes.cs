@@ -34,7 +34,7 @@ namespace pryAguirreIE
 
         private void btnBuscarApellido_Click(object sender, EventArgs e)
         {
-            objBaseDatos.BuscarPorApellido(int.Parse(txtApellido.Text));
+            objBaseDatos.BuscarPorApellido(txtApellido.Text);
         }
         int id = 0;
         private void btnCambiar_Click(object sender, EventArgs e)

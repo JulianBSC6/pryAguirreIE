@@ -117,7 +117,7 @@ namespace pryAguirreIE
             }
         }
 
-        public void BuscarPorApellido(int ApellidoSocio)
+        public void BuscarPorApellido(string ApellidoSocio)
         {
             comandBD = new OleDbCommand();
 
@@ -132,7 +132,7 @@ namespace pryAguirreIE
                 bool seEncuentra = false;
                 while (LeerBD.Read())
                 {
-                    if (int.Parse(LeerBD[2].ToString()) == ApellidoSocio)
+                    if (LeerBD[2].ToString() == ApellidoSocio)
                     {
                         MessageBox.Show("cliente existe", "consulta",
                             MessageBoxButtons.OK,
