@@ -121,12 +121,14 @@ namespace pryAguirreIE
         string nombreArchivo;
         public void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            this.Hide();
             DirectoryInfo info = new DirectoryInfo(@"../../" + "Resources");
             string ruta = info.FullName;
             nombreArchivo = listView1.SelectedItems[0].Text;
             StreamReader Leer = new StreamReader(ruta+ "\\" + nombreArchivo);
             clsGrabarArchivo.RutaFull = ruta + "\\"+ nombreArchivo;
             CargarProveedores.RutaFull =  ruta+ "\\" + nombreArchivo;
+            frmMostrarGrilla.RutaFull = ruta + "\\" + nombreArchivo; 
 
             LeerLinea = Leer.ReadLine();
             SepararDatos = LeerLinea.Split(';');

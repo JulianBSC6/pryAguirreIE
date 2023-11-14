@@ -69,6 +69,8 @@ namespace pryAguirreIE
             this.Hide();
             Proveedores pasar = new Proveedores();
             pasar.Show();
+            clsUsuario objUsuario = new clsUsuario();
+            objUsuario.RegistroLogInicioSesionProveedores();
         }
 
         private void cargarProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +78,15 @@ namespace pryAguirreIE
             this.Hide();
             CargarProveedores Pasar = new CargarProveedores();
             Pasar.Show();
+        }
+
+        private void mostrarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMostrarClientes pasar = new frmMostrarClientes();
+            pasar.Show();
+            clsUsuario objUsuario = new clsUsuario();
+            objUsuario.RegistroLogInicioSesionClientes();
         }
     }
 }

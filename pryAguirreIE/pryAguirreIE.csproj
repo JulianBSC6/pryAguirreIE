@@ -52,6 +52,7 @@
     <Compile Include="CargarProveedores.Designer.cs">
       <DependentUpon>CargarProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="clsBaseDatos.cs" />
     <Compile Include="clsGrabarArchivo.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="frmInicio.cs">
@@ -72,11 +73,23 @@
     <Compile Include="frmLogo.Designer.cs">
       <DependentUpon>frmLogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMostrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarClientes.Designer.cs">
+      <DependentUpon>frmMostrarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMostrarGrilla.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMostrarGrilla.Designer.cs">
       <DependentUpon>frmMostrarGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCuenta.Designer.cs">
+      <DependentUpon>frmRegistrarCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,8 +111,14 @@
     <EmbeddedResource Include="frmLogo.resx">
       <DependentUpon>frmLogo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarClientes.resx">
+      <DependentUpon>frmMostrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarGrilla.resx">
       <DependentUpon>frmMostrarGrilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCuenta.resx">
+      <DependentUpon>frmRegistrarCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

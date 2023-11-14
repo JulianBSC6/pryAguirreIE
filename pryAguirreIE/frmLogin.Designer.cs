@@ -176,6 +176,7 @@
             this.btnRegistrarse.TabIndex = 5;
             this.btnRegistrarse.Text = "No estas registrado? registrate aqui";
             this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // label6
             // 

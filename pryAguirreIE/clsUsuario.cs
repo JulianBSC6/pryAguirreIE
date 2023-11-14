@@ -62,6 +62,7 @@ namespace pryAguirreIE
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -127,6 +128,7 @@ namespace pryAguirreIE
                 nuevoRegistro["Categoria"] = "Inicio Sesión";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio Fallido";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -162,6 +164,7 @@ namespace pryAguirreIE
                 nuevoRegistro["Categoria"] = "Inicio Sistema";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio Menu";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
 
                 objTabla.Rows.Add(nuevoRegistro);
 
@@ -195,16 +198,129 @@ namespace pryAguirreIE
                 DataTable objTabla = objDS.Tables["Logs"];
                 DataRow nuevoRegistro = objTabla.NewRow();
 
-                nuevoRegistro["Categoria"] = "Inicio Sesión";
+                nuevoRegistro["Categoria"] = "Inicio Sesión proveedores";
                 nuevoRegistro["FechaHora"] = DateTime.Now;
                 nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
+
 
                 objTabla.Rows.Add(nuevoRegistro);
 
                 OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
                 adaptadorBD.Update(objDS, "Logs");
 
-                estadoConexion = "Registro exitoso de log";
+                estadoConexion = "inicio sesion proveedores";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+
+        public void RegistroLogInicioSesionClientes()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sesión clientes";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio exitoso";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "inicio sesion clientes";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+
+        public void RegistroLogInicioBloqueado()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Inicio Sesión Sistema";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Inicio Bloqueado";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "inicio sesion Bloqueado";
+            }
+            catch (Exception error)
+            {
+
+                estadoConexion = error.Message;
+            }
+
+        }
+
+        public void RegistroLogCrearCuenta()
+        {
+            try
+            {
+                comandoBD = new OleDbCommand();
+
+                comandoBD.Connection = conexionBD;
+                comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                comandoBD.CommandText = "Logs";
+
+                adaptadorBD = new OleDbDataAdapter(comandoBD);
+
+                adaptadorBD.Fill(objDS, "Logs");
+
+                DataTable objTabla = objDS.Tables["Logs"];
+                DataRow nuevoRegistro = objTabla.NewRow();
+
+                nuevoRegistro["Categoria"] = "Crear Cuenta";
+                nuevoRegistro["FechaHora"] = DateTime.Now;
+                nuevoRegistro["Descripcion"] = "Cuenta Creada exitosamente";
+                nuevoRegistro["Perfil"] = frmLogin.usuario;
+
+                objTabla.Rows.Add(nuevoRegistro);
+
+                OleDbCommandBuilder constructor = new OleDbCommandBuilder(adaptadorBD);
+                adaptadorBD.Update(objDS, "Logs");
+
+                estadoConexion = "Cuenta creada exitosamente";
             }
             catch (Exception error)
             {

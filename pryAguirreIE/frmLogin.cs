@@ -38,9 +38,13 @@ namespace pryAguirreIE
                 txtContraseña.PasswordChar = '*';
             }
         }
-
+        int cont = 3;
+        public static string usuario;
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            usuario=txtUsuario.Text;
+           
             
             clsUsuario objUsuario = new clsUsuario();
 
@@ -56,9 +60,24 @@ namespace pryAguirreIE
             }
             else
             {
+                cont = cont - 1;
                 MessageBox.Show("Contraseña y/o Usuario incorrectos", "Error login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 objUsuario.RegistroLogInicioFallidoSesion();
+                
+                if (cont <= 0)
+                {
+                    MessageBox.Show("Se excedio el limite de intentos","Sistema Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnIngresar.Enabled = false;
+                    objUsuario.RegistroLogInicioBloqueado();
+                }
             }
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegistrarCuenta pasar = new frmRegistrarCuenta();
+            pasar.ShowDialog();
         }
     }
 }

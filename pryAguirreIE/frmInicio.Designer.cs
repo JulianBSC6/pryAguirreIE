@@ -33,6 +33,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -50,10 +52,11 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Goldenrod;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proveedoresToolStripMenuItem});
+            this.proveedoresToolStripMenuItem,
+            this.clientesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(497, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(497, 29);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -61,17 +64,33 @@
             // 
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarProveedoresToolStripMenuItem});
-            this.proveedoresToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proveedoresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(120, 25);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // buscarProveedoresToolStripMenuItem
             // 
             this.buscarProveedoresToolStripMenuItem.Name = "buscarProveedoresToolStripMenuItem";
-            this.buscarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.buscarProveedoresToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.buscarProveedoresToolStripMenuItem.Text = "Buscar Proveedores";
             this.buscarProveedoresToolStripMenuItem.Click += new System.EventHandler(this.buscarProveedoresToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarClientesToolStripMenuItem});
+            this.clientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // mostrarClientesToolStripMenuItem
+            // 
+            this.mostrarClientesToolStripMenuItem.Name = "mostrarClientesToolStripMenuItem";
+            this.mostrarClientesToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.mostrarClientesToolStripMenuItem.Text = "Mostrar Clientes";
+            this.mostrarClientesToolStripMenuItem.Click += new System.EventHandler(this.mostrarClientesToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -127,5 +146,7 @@
         private System.Windows.Forms.ToolStripMenuItem buscarProveedoresToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarClientesToolStripMenuItem;
     }
 }
